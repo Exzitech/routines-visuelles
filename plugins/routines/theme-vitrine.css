@@ -18,12 +18,12 @@
 }
 
 html:root {
-  --bg: #f6f1e9;
-  --panel: #fbf8f3;
-  --panel-2: #ede5d8;
+  --bg: #f3f4f5;
+  --panel: #ffffff;
+  --panel-2: #e9ebed;
   --text: #1b1a17;
-  --muted: #5f584e;
-  --border: #d6cbb9;
+  --muted: #5b5f66;
+  --border: #dcdfe3;
   --accent: #b04a1f;
   --accent-2: #d9774a;
   --tint-accent: rgba(176, 74, 31, .09);
