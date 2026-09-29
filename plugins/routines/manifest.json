@@ -1,0 +1,11 @@
+{
+  "id": "routines",
+  "name": "Visual Routines",
+  "icon": "gallery-horizontal",
+  "category": "family",
+  "version": "0.1.2",
+  "platforms": ["windows", "android"],
+  "description": "Visual routines for children with ARASAAC pictograms: printable A4 strip (PDF) and a full-screen step-by-step view on the phone, synced on Nextcloud.",
+  "entry": "index.js",
+  "style": "style.css"
+}

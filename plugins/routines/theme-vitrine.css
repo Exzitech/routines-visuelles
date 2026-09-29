@@ -1,0 +1,47 @@
+/*
+ * Theme des demos web (vitrines du portfolio), pose par copier-vitrine.cjs par-dessus
+ * hub/src/styles.css : memes couleurs et polices que exzitech.github.io.
+ * html:root l'emporte sur :root quel que soit l'ordre des feuilles apres le build.
+ *
+ * Les polices viennent du site portfolio (/fonts/, meme domaine sur GitHub Pages).
+ * Hors de ce domaine (npm run dev d'une vitrine), la police systeme prend le relais.
+ */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage.woff2") format("woff2");
+  font-weight: 200 800; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/instrument-sans.woff2") format("woff2");
+  font-weight: 400 700; font-display: swap;
+}
+
+html:root {
+  --bg: #f6f1e9;
+  --panel: #fbf8f3;
+  --panel-2: #ede5d8;
+  --text: #1b1a17;
+  --muted: #5f584e;
+  --border: #d6cbb9;
+  --accent: #b04a1f;
+  --accent-2: #d9774a;
+  --tint-accent: rgba(176, 74, 31, .09);
+  --line-accent: rgba(176, 74, 31, .38);
+  --success-text: #2f6f45;
+  --shadow-card: 0 1px 2px rgba(27, 26, 23, .04), 0 2px 8px rgba(27, 26, 23, .05);
+  --shadow-pop: 0 8px 24px rgba(27, 26, 23, .12);
+  font-family: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+html:root h1, html:root h2, html:root h3 {
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.bandeau-demo {
+  font: 13px/1.5 "Instrument Sans", system-ui, sans-serif; padding: 7px 12px; text-align: center;
+  background: #1b1a17; color: #efe8dc;
+}
+.bandeau-demo a { color: #e8906a; }
+.bandeau-demo .retour { float: left; text-decoration: none; }

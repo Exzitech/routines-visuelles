@@ -1,0 +1,40 @@
+/* Routines visuelles : styles du plugin */
+.rtn-page { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; max-width: 1100px; }
+.rtn-onglets { display: flex; gap: 6px; flex-wrap: wrap; }
+.rtn-bloc { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 12px 14px; border-radius: var(--radius); background: var(--panel); min-width: 0; box-shadow: var(--shadow-card); }
+.rtn-bloc h3 { margin: 0; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.rtn-titre { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rtn-nom { font-size: 16px; font-weight: 600; flex: 1; min-width: 160px; }
+.rtn-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.rtn-erreur { color: var(--error-text); background: var(--tint-error); padding: 6px 10px; border-radius: var(--radius-sm); margin: 0; }
+.rtn-form { display: flex; flex-wrap: wrap; gap: 8px; }
+.rtn-form input { flex: 1; min-width: 160px; }
+.rtn-confirmer { background: var(--error-text); color: #fff; border-color: var(--error-text); }
+
+/* Bande de l'editeur : cartes blanches comme sur le papier, defilement horizontal sur telephone. */
+.rtn-bande { list-style: none; margin: 0; padding: 10px 0 4px 10px; display: flex; gap: 12px; overflow-x: auto; }
+.rtn-carte { position: relative; flex: 0 0 140px; display: grid; gap: 6px; padding: 8px; border-radius: 8px; background: #fff; color: #222; }
+.rtn-carte img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.rtn-carte input { width: 100%; box-sizing: border-box; text-align: center; }
+.rtn-numero { position: absolute; top: -8px; left: -8px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: #222; color: #fff; font-size: 12px; font-weight: 700; }
+.rtn-outils { display: flex; justify-content: space-between; }
+.rtn-outils button { background: #fff; color: #222; border-color: #ccc; min-width: 34px; }
+
+.rtn-resultats { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.rtn-resultat { display: grid; gap: 4px; padding: 6px; background: #fff; color: #222; border-radius: 8px; font-size: 12px; }
+.rtn-resultat img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+
+/* Plein ecran pour l'enfant : fond blanc, une seule grande etape. */
+.rtn-plein { position: fixed; inset: 0; z-index: 1000; display: grid; grid-template-rows: auto minmax(0, 1fr); background: #fff; color: #222; user-select: none; }
+.rtn-plein-haut { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #ddd; }
+.rtn-plein-btn { font-size: 22px; min-width: 48px; min-height: 48px; background: #f2f2f2; color: #222; border: 1px solid #ccc; border-radius: 10px; }
+.rtn-suivi { list-style: none; margin: 0; padding: 0; flex: 1; display: flex; gap: 6px; justify-content: center; overflow-x: auto; }
+.rtn-suivi li { flex: 0 0 auto; width: 44px; height: 44px; padding: 2px; border: 2px solid transparent; border-radius: 8px; }
+.rtn-suivi img { width: 100%; height: 100%; object-fit: contain; }
+.rtn-suivi .rtn-fait { opacity: .3; }
+.rtn-suivi .rtn-courante { border-color: #222; }
+.rtn-grande { margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; place-items: center; padding: 16px; gap: 12px; }
+.rtn-grande img { width: 100%; height: 100%; max-width: 70vmin; object-fit: contain; }
+.rtn-grande figcaption { font-size: clamp(24px, 7vmin, 56px); font-weight: 600; text-align: center; }
+.rtn-bravo { display: grid; place-items: center; align-content: center; gap: 24px; }
+.rtn-bravo span { font-size: 40vmin; line-height: 1; color: #2e9d4f; }

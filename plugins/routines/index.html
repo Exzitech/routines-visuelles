@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visual Routines (démo)</title>
+    <link rel="stylesheet" href="./theme-vitrine.css" />
+  </head>
+  <body>
+    <div class="bandeau-demo">
+      <a class="retour" href="/">← Portfolio</a>
+      Démo web de <strong>Visual Routines</strong>, un plugin d'ExziHub (application de bureau Tauri).
+      Les données restent dans ce navigateur. <em>Routines d'exemple préremplies ; « PDF » génère la bande A4 à imprimer.</em> <a href="https://github.com/Exzitech/routines-visuelles">Code source</a>
+    </div>
+    <div id="root"></div>
+    <script>
+      // Donnees fictives de demo.json, posees a la premiere visite seulement.
+      (() => {
+        const demo = {"sync:routines/routines.json":{"texte":"{\"version\":1,\"revision\":1,\"routines\":[{\"id\":\"matin\",\"nom\":\"Le matin\",\"etapes\":[{\"id\":\"s24\",\"picto\":8152,\"texte\":\"Se lever\"},{\"id\":\"s25\",\"picto\":5921,\"texte\":\"Toilettes\"},{\"id\":\"s26\",\"picto\":6627,\"texte\":\"S'habiller\"},{\"id\":\"s27\",\"picto\":4626,\"texte\":\"Petit-déjeuner\"},{\"id\":\"s28\",\"picto\":2326,\"texte\":\"Dents\"},{\"id\":\"s29\",\"picto\":2622,\"texte\":\"Chaussures\"},{\"id\":\"s30\",\"picto\":2242,\"texte\":\"Manteau\"},{\"id\":\"s31\",\"picto\":3082,\"texte\":\"École\"}]},{\"id\":\"soir\",\"nom\":\"Le soir\",\"etapes\":[{\"id\":\"s32\",\"picto\":6058,\"texte\":\"Bain\"},{\"id\":\"s33\",\"picto\":2522,\"texte\":\"Pyjama\"},{\"id\":\"s34\",\"picto\":2326,\"texte\":\"Dents\"},{\"id\":\"s35\",\"picto\":7141,\"texte\":\"Histoire\"},{\"id\":\"s36\",\"picto\":6479,\"texte\":\"Dormir\"}]}]}","version":"1"}};
+        const d = new Date();
+        const mois = (m) => { const x = new Date(d.getFullYear(), d.getMonth() - m, 1); return x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0"); };
+        const jetons = (t) => t.replaceAll("{{MOIS}}", mois(0)).replaceAll("{{MOIS-1}}", mois(1));
+        try {
+          if (localStorage.getItem("demo:posee:routines")) return;
+          for (const [cle, v] of Object.entries(demo)) {
+            localStorage.setItem(cle, jetons(typeof v === "string" ? v : JSON.stringify(v)));
+          }
+          localStorage.setItem("demo:posee:routines", "1");
+        } catch (e) { console.error("demo.json non applique", e); }
+      })();
+    </script>
+    <script type="module" src="./src/dev.tsx"></script>
+  </body>
+</html>

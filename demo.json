@@ -1,0 +1,6 @@
+{
+  "sync:routines/routines.json": {
+    "texte": "{\"version\":1,\"revision\":1,\"routines\":[{\"id\":\"matin\",\"nom\":\"Le matin\",\"etapes\":[{\"id\":\"s24\",\"picto\":8152,\"texte\":\"Se lever\"},{\"id\":\"s25\",\"picto\":5921,\"texte\":\"Toilettes\"},{\"id\":\"s26\",\"picto\":6627,\"texte\":\"S'habiller\"},{\"id\":\"s27\",\"picto\":4626,\"texte\":\"Petit-déjeuner\"},{\"id\":\"s28\",\"picto\":2326,\"texte\":\"Dents\"},{\"id\":\"s29\",\"picto\":2622,\"texte\":\"Chaussures\"},{\"id\":\"s30\",\"picto\":2242,\"texte\":\"Manteau\"},{\"id\":\"s31\",\"picto\":3082,\"texte\":\"École\"}]},{\"id\":\"soir\",\"nom\":\"Le soir\",\"etapes\":[{\"id\":\"s32\",\"picto\":6058,\"texte\":\"Bain\"},{\"id\":\"s33\",\"picto\":2522,\"texte\":\"Pyjama\"},{\"id\":\"s34\",\"picto\":2326,\"texte\":\"Dents\"},{\"id\":\"s35\",\"picto\":7141,\"texte\":\"Histoire\"},{\"id\":\"s36\",\"picto\":6479,\"texte\":\"Dormir\"}]}]}",
+    "version": "1"
+  }
+}
